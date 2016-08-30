@@ -1,0 +1,12 @@
+{
+  "name": "notapp",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "materialize-css": "^0.97.7",
+    "meteor-node-stubs": "~0.2.0"
+  }
+}

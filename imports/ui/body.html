@@ -1,0 +1,38 @@
+<body>
+
+  <div class="container">
+    
+    <header>
+      <h1>Todo List ({{incompleteCount}})</h1>
+      <p>
+        <input type="checkbox" id="hide-completed" class="hide-completed"/>
+        <label for="hide-completed" >Hide Completed Tasks</label>
+      </p>
+      {{> loginButtons}}
+    </header> 
+
+    {{#if currentUser}}
+    <div class="row">
+      <form class="col s12 new-task">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="newTaskTitle" type="text" class="validate" name="newTaskTitle">
+            <label for="newTaskTitle">Title</label>          
+          </div>
+          <div class="input-field col s12">
+            <textarea id="newTaskDescription" class="materialize-textarea" name="newTaskDescription"></textarea>
+            <label for="newTaskDescription">Description</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    {{/if}}
+  
+    {{#each tasks}}
+      {{> task}}
+    {{/each}}
+
+  </div>
+
+</body>
+ 
