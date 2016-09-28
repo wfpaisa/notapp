@@ -9,7 +9,7 @@ $primary-color: color("grey", "lighten-4");
 
 // Estilos generales
 // 
-body{display:flex; min-height:100vh; flex-direction:column; color:#17324A;}
+body{background:#F3F3F3; display:flex; min-height:100vh; flex-direction:column; color:#17324A;}
 main{flex:1 0 auto;}
 
 h1{font-size:32px; margin:2px 0px 5px -5px; }
@@ -21,9 +21,33 @@ h4{font-size:16px; margin:2px 0px; }
 footer.page-footer .footer-copyright,
 .grey-text.text-lighten-4{color:#2A2A2A!important;}
 
-article{border-bottom:1px solid #929292; margin-bottom:20px; padding:5px; position:relative; }
-article time{font-size:10px; position:absolute; top:0px; right:5px; color:#3371A9; font-weight:normal; transition: all 0.5s ease; opacity:0;}
-article:hover time{display:block; opacity:1;}
+// Notas
+.collection{overflow:visible;}
+	
+	// Item Nota
+	.collection .collection-item{position:relative; cursor:pointer; padding:10px 20px 40px 20px; transition: all 0.3s ease;}
+	.collection .collection-item:hover {background:#F6F6F6; }
+		
+		// time
+		.collection .collection-item time{font-size:11px; position:absolute; top:0px; right:70px; color:rgba(30,28,28,0.4); font-weight:normal; transition: all 0.5s ease; opacity:0;}
+		.collection .collection-item time:hover{color:#000;}
+		.collection .collection-item:hover time{display:block; opacity:1;}
+		.collection .collection-item .index{position:absolute; top:0; left:-20px; font-size:11px; color:#8B999E; height:100%; display: flex; align-items: center; }
+		.collection .collection-item .index span{display:inline-block;}
+		.collection .collection-item .data{white-space: pre-wrap; }
+		.collection .collection-item .data:focus{outline: none;}
+
+		.collection .collection-item .delete{display:none;}
+		.collection .collection-item:hover .delete{display:block;}
+
+		//.collection .collection-item .data{    -moz-appearance: textfield-multiline; -webkit-appearance: textarea;}		
+		.collection .collection-item.item-editing{background:#E4F9FF;}
+		.collection-item.item-active{background:#FFF; box-shadow:0px 0px 8px 2px rgba(0,0,0,0.2); border-top:0px!important; z-index:2; margin-top:-2px; margin-bottom:2px;}
+		.collection-item.item-active .delete{display:block;}
 
 section{background:#FFF; border:1px solid transparent; padding:0px 5px; margin-bottom:5px; position:relative;}
+
+footer.page-footer .footer-copyright{overflow:visible;}
+footer.page-footer .footer-copyright #login-dropdown-list{top:initial; bottom:1px;}
+
 
