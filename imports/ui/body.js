@@ -10,28 +10,13 @@ import './task.js';
 
 // State contendra un diccionario reactivo
 Template.body.onCreated(function bodyOnCreated() {
+  
   this.state = new ReactiveDict();
+  
   Session.set("currentTask", 0);
 
   Meteor.subscribe('tasks');
 
-
-  // Acciones para el teclado
-  $(document).on('keyup', (e) => {
-
-    // console.log(e.keyCode)
-    // // Abajo
-    // if( e.keyCode === 9){
-    //   e.preventDefault();
-    //   Session.set("currentTask", Session.get("currentTask")+1);
-    // }
-    // // Arriba
-    // if( (e.keyCode === 9) && (e.keyCode === 16) && (Session.get("currentTask") > 0) ){
-    //   e.preventDefault();
-    //   Session.set("currentTask", Session.get("currentTask")-1);
-    // }    
-    
-  });
 
 });
 

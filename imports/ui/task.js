@@ -27,12 +27,21 @@ Template.task.helpers({
   },
 
 	session(){
+		// Asigno el foco a la instancia
+		var tmpl = Template.instance();
+
+		// revisar cambios, si se a realizado un cambio
+		// en alguna otra instancia
+		if (tmpl.view.isRendered) {
+			if(this.task.data != tmpl.$('.data').html()){
+				tmpl.$('.data').html(this.task.data)	
+			}
+		}
 		
+
+		// Tarea que se esta editando
 		if(Session.get('currentTask') === this.index){
-			
-			// Asigno el foco a la instancia
-			var tmpl = Template.instance();
-			
+						
 			// Compruebo que exista una instancia, de lo contrario
 			// sacaria un error antes de renderizar
 			if (tmpl.view.isRendered) {
@@ -86,7 +95,6 @@ Template.task.events({
 
 				//console.log('datos actualizados: ')
 			} );
-			
 			
 			tpl.$('.collection-item').removeClass('item-editing');
       

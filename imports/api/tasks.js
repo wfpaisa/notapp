@@ -16,12 +16,12 @@ if (Meteor.isServer) {
 
 }
 
-Meteor.startup(function () {
-  Tracker.autorun(function() {
-    console.log('cambio');
-  });
+// Meteor.startup(function () {
+//   Tracker.autorun(function() {
+//     console.log('cambio');
+//   });
 
-});
+// });
 
 Meteor.methods({
   // Nueva nota
@@ -47,8 +47,12 @@ Meteor.methods({
   'tasks.remove'(taskId) {
     
     check(taskId, String);
-  
-    Tasks.remove(taskId);
+    
+    // evito el error  Uncaught Error: Must be attached
+    // https://github.com/meteor/meteor/issues/2981#issuecomment-247613492
+    if (!this.isSimulation) {
+      Tasks.remove(taskId);
+    }
 
   },
 

@@ -1,3 +1,14 @@
+// cafe oscuro: #3E3634
+// cafe claro: #9C9B93
+// verde oscuro: #5E8B2D
+// verde claro: #71AD35
+
+// azul claro: #62B5B3
+
+// cafe 2: #4A3C34
+// azul 2: #4E838A
+// fondo: #B5C4CD  // desbanece de blanco a este
+// 
 // Para crear una sobre escritura de variables
 @import "../node_modules/materialize-css/sass/components/_color.scss";
 
@@ -9,7 +20,7 @@ $primary-color: color("grey", "lighten-4");
 
 // Estilos generales
 // 
-body{background:#F3F3F3; display:flex; min-height:100vh; flex-direction:column; color:#17324A;}
+body{background:#FFF; display:flex; min-height:100vh; flex-direction:column; color:#727272;}
 main{flex:1 0 auto;}
 
 h1{font-size:32px; margin:2px 0px 5px -5px; }
@@ -22,18 +33,18 @@ footer.page-footer .footer-copyright,
 .grey-text.text-lighten-4{color:#2A2A2A!important;}
 
 // Notas
-.collection{overflow:visible;}
+.collection{border:none; overflow:visible; }
 	
 	// Item Nota
-	.collection .collection-item{position:relative; cursor:pointer; padding:10px 20px 40px 20px; transition: all 0.3s ease;}
+	.collection .collection-item{position:relative; border:1px solid #E6E6E6; cursor:pointer; padding:10px 20px 40px 20px; margin-bottom:10px; transition: all 0.2s ease;}
 	.collection .collection-item:hover {background:#F6F6F6; }
 		
 		// time
 		.collection .collection-item time{font-size:11px; position:absolute; top:0px; right:70px; color:rgba(30,28,28,0.4); font-weight:normal; transition: all 0.5s ease; opacity:0;}
 		.collection .collection-item time:hover{color:#000;}
 		.collection .collection-item:hover time{display:block; opacity:1;}
-		.collection .collection-item .index{position:absolute; top:0; left:-20px; font-size:11px; color:#8B999E; height:100%; display: flex; align-items: center; }
-		.collection .collection-item .index span{display:inline-block;}
+		.collection .collection-item .index{position:absolute; top:0; left:-30px; font-size:11px; color:#8B999E; height:100%; display: flex; align-items: center; }
+		.collection .collection-item .index span{border-radius:10px; display:inline-block; background:#E1E1E1; height:20px; margin-left:-10px; text-align:center; width:20px;}
 		.collection .collection-item .data{white-space: pre-wrap; }
 		.collection .collection-item .data:focus{outline: none;}
 
@@ -41,8 +52,8 @@ footer.page-footer .footer-copyright,
 		.collection .collection-item:hover .delete{display:block;}
 
 		//.collection .collection-item .data{    -moz-appearance: textfield-multiline; -webkit-appearance: textarea;}		
-		.collection .collection-item.item-editing{background:#E4F9FF;}
-		.collection-item.item-active{background:#FFF; box-shadow:0px 0px 8px 2px rgba(0,0,0,0.2); border-top:0px!important; z-index:2; margin-top:-2px; margin-bottom:2px;}
+		.collection .collection-item.item-editing{border-color:#A2CDF9;}
+		.collection-item.item-active{background:#FFF; box-shadow:0px 0px 12px 1px rgba(0,0,0,0.1); z-index:2;}
 		.collection-item.item-active .delete{display:block;}
 
 section{background:#FFF; border:1px solid transparent; padding:0px 5px; margin-bottom:5px; position:relative;}
