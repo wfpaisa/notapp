@@ -3,9 +3,7 @@
   <article class="collection-item item-{{index}} {{# if editing}}item-editing{{/if}} {{# if session}}item-active{{/if}}">
     <time datetime="2001-05-15T19:00">{{task.createdAt}}</time>
     <div class="index"><span>{{index}}</span></div>
-    <div class="secondary-content"> 
-      <a class="btn-floating btn-small waves-effect waves-light white delete"><i class="material-icons grey-text">close</i></a>
-    </div>
+    {{!--<div class="secondary-content">  <a class="btn-floating btn-small waves-effect waves-light white delete"><i class="material-icons grey-text">close</i></a> </div>--}}
     <div class="data" contenteditable="true"></div>
     {{!--<textarea class="data">{{{task.data}}}</textarea>--}}
   </article>

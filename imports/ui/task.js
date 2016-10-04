@@ -133,5 +133,3 @@ Template.task.onRendered(function () {
 
 })
 
-
-

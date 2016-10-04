@@ -10,13 +10,12 @@
 // fondo: #B5C4CD  // desbanece de blanco a este
 // 
 // Para crear una sobre escritura de variables
-@import "../node_modules/materialize-css/sass/components/_color.scss";
+// @import "../node_modules/materialize-css/sass/components/_color.scss";
+
+@import "../imports/ui/styles/normalize.scss";
 
 $primary-color: color("grey", "lighten-4");
 
-
-// Estilos material design
-@import "../node_modules/materialize-css/sass/materialize.scss";
 
 // Estilos generales
 // 
